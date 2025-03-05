@@ -1,0 +1,338 @@
+El comanto para iniciar el autocompleado del HTML es mediante 
+html: 5 + (tacla tab)
+
+Como se estructuran las sescciones de una pagina 
+    algunas etiquetas para agrupar el contenido 
+        <header> parte superior 
+        <footer> inferior
+        <nav> menu de navegacion
+        <main> contenido principa 
+        <section> si se tiene alguna seccion
+        <articule> entreda de block o noticia 
+        <aside> barra lateral
+        <div> donde no se logre utilizar ninguno de los anteriores 
+
+Si se tiene un heavin como h2 y h3 van dentro del seeccion ya que usualmente se tiene contenido importante 
+
+
+Pagina para generar texto 
+Lorelipson
+
+Pagina para generar iconos 
+
+    RECURSO: https://tablericons.com/        https://heroicons.com/
+
+Tabler icons
+Hero icons
+
+Ejemplo de formularios 
+
+    <section>
+        <h2>Contacto</h2>
+        <form> <!--Todos los datos dentro pertenecen a los formularios-->
+            <fieldset>
+                <legend>Contactame llenando todos los campos</legend> <!--De lo que trata el formulario-->
+            </fieldset> <!--Son de sus compos-->
+            
+            <div>
+                <label>Nombre</label> <!--Es la indicacion-->
+                <input type="text" placeholder="Tu nombre"> <!--Hay muchos, ver cual es el que se acopla al proyecto-->
+            <!--El placeholder da indicaciones dentro del input-->
+            </div>
+            
+            <div>
+                <label>Telefono</label>
+                <input type="tel" placeholder="Tu numero">>
+            </div>
+            
+            <div>
+                <label>Correo</label>
+                <input type="email" placeholder="Tu correo">
+            </div>
+            
+            <div>
+                <label>Mensaje</label>
+                <textarea></textarea>  <!--Se hace el area de mensaje mas grande o pequeña dependiendo de cuando se escriba-->
+            </div>
+           
+            <div>
+                <input type="submit" value="Enviar"> <!--Con value muestra el texto dentro del boton-->
+            </div>
+            
+        </form>
+    </section>
+    
+    <footer>
+        <p>Todos los derechos reservados. Yair Guerra</p>
+    </footer>
+    
+
+    CSS se encarga de: 
+        Tamaños y Tipos de fuentes 
+        Colores 
+        Espacios 
+        Margenes
+        Adaptar diseños a distintos dispositivos 
+
+Ejemplo de sintaxis de CSS 
+        
+        Anatonomia de CSS 
+            p {        // Selector que debe concordar con el HTML 
+                color: blue;  // propiedad + valor 
+            }
+
+Para vincular en el HTML 
+
+   <link rel="preload" href="css/styles.css" as="style"> //Hace que las hojas de estilo cargen mas rapido 
+    <link href="css/styles.css" rel="stylesheet"> 
+
+
+Unidades de medida px, y rem 
+-los pixeles ya no la mejor opcion debido a que actualmente hay pantallas muy pequelas con densidad de pixeles muy grande, los rem nacen a partir de esta necesidad 
+-rem es relativo al documento 
+y para que se adapte al todos los dispositivos lo recomendable es hacer la siguiente configuracion 
+
+            html {
+                font-size: 62.5%;
+            } 
+            body {
+                font-size: 16px; /*1 rem = 10 px*/
+            }
+
+Formas de escribir selectores en CSS 
+     
+     SELECTOR ELEMENTO 
+Selecciona un elemento en base a su etiqueta
+
+    p{
+        color: blue;
+    }
+
+    SELECTOR DE CLASE 
+Una clase se puede crear multiples veces (es reutilizable) e inicia con un punto "."
+
+    .cliente {
+        color: blue;
+    }
+
+    SELECTOR ID 
+Se pueden tener mutiples ID´S por pagina pero sus nobres no pueden repetirse 
+    #cliente {
+        color: blue;
+    }
+
+    SELECTOR DE ATRIBUTO 
+Selecciona elementos en base a algun atributo que tenga 
+    [src="logo.jpg"] {
+        color: blue;
+    }
+
+    COMBINACION DE DESCENDENTES 
+Seleciona los elementos hijos cuyo padre sea una clase (o ID) en espacifico 
+    .cliente . nombre {
+        color: blue;
+    }
+
+    TODOS LOS HIJOS 
+Aplica la siguiente regla a todos los parrafos hijos 
+
+    .cliente > p{
+        colr: blue; 
+    }
+
+El elemento "class" esta disponible en todos lo elementos HTML 
+
+    ESPECIFICIDAD EN CSS
+Minetras mas especifico sea un selector sera el que se aplicara 
+¿Que es?
+    mostrara el css de acuerdo a que tan espacifico es el selector que se ha creado 
+    CSS es en cascada, eso no significa que si un selector aparece despues sera tomado en cuenta sino mas bien su especificadad 
+
+    COLORES EN CSS 
+Se recomienda hacer los hexadecimal o por rgb 
+Se puede generar una pleta de colores mediante 
+custom properti
+        
+        :root {
+            --blanco: #ffffff;
+            --oscuro: #212121;
+            --primario: #ffc107;
+        }
+
+La ventaje es que que si se desea cambiar solo se hace un solo cambio 
+
+    CAMBIAR TIPO DE FUENTE 
+
+    RECURSO: https://fonts.google.com/
+
+    GENERAR TEXTO RAMDOM 
+
+    RECURSO: https://www.lipsum.com/
+
+todas las que estan con font -
+Para encontrar buenas funes puede ser a traves de GOOGLE fonts 
+Se agrega en el <HEAD> del HYML la api de fuentes de google y se declara en la hoja de CSS la nueva fuente 
+
+    LIBRERIA NORMALIZE  (las librerias siempre en un nuevo archivo)
+
+    RECURSO: https://necolas.github.io/normalize.css/8.0.1/normalize.css
+Permite que todos los elementos se van bien en cualquier navegador 
+Se debe de declarar como primer librerias para que se normalice en todos los dispositivos 
+
+
+    DISPLAY BLOCK o INLINE
+Algunos elementos se muestran de una forma mientras que otros de algun otro manera 
+
+    display: block;     
+    significa que el elemento se colocara uno debejo del otro sin importar su tamaño o contenido 
+
+    display: inline; 
+    significa que el elemetno se va a posicionar a la derecha una vez que haya tomado el espacio que requiere 
+
+
+    MARGIN ES DIFERENTE A PADDING 
+    padding es el que la grosor a la barra de navegacion 
+
+Barra de cnavegacion queda de la siguiente manera 
+
+        .navBg {
+            background-color: var(--secundario);
+
+        }
+
+        .navegacionPrincipal {
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        .navegacionPrincipal a {
+            color: var(--blanco);
+            text-decoration: none;
+        }
+
+    
+    FLEXBOX
+Fue diseñado como modelo unidimensional para crear layouts
+Se va de izquierda a derecha o de arriba hacia abajo 
+
+    2 ejes de flexbox
+    fila (row)      Aplicado por default para definir un display: flex 
+    columna (column)        Los otros valores son row-reverse, column y column-reverse 
+
+flexbox es especialmente diseñado para alinear elementos en tus diseños 
+    no añade efectos de animacion ni textos, es una tecnologia utilizada unicamente para los layouts y sustituye a los floats o table-cell
+
+
+    ESTILOS PARA ESCRIBIR CSS
+    ( BEM, Utility First o Modulo )
+
+Si el proyecto es grande es buena idea utilizar cualquiera de los 3
+
+    BEM - Bloques Elementos Modificadores 
+
+        .card {}
+        .card__titulo {}
+        .card__imagen {}
+        .card__botton {}
+        .card__botton--activo {}
+
+    Utility First
+Se crea clase con una sola propiedad que describe que es lo que haria 
+
+        .text-center {}
+        .color-red-100 {}
+        .bg-blue-200 {}
+        .p-2 {}
+        .m-2 {}
+
+    Modulos 
+Se define el contenido principal y despues se va seleccionando cada uno de los elementos 
+        .card {}
+        .card h2 {}
+        .card img {}
+        .card a {}
+
+
+    **  RESPONSIVE WEB DESIGN Y MEDIA QUERIES **
+
+Hoy en dia los usuarios navegan desde diferentes dispositivos nace a partir de ello estas tecnologias
+
+    Responsive Webe Design 
+        Es un enfoque que nos dice que nuestros diseños deberan adaptarse a las interacciones del usuario y la resolucion que utiliza 
+
+    Media Queries 
+        @media ( min-width: 768px ){
+
+        }
+        @media ( min-width: 992px ){
+
+        }
+
+Se optimizo la creacion de media querie con teclas "me" desde el json de css en snippets 
+
+	"Crea un Media Querie": {
+		"prefix": "mq",
+		"body": "@media (min-width: $1) {\n    $2\n}"
+	}
+
+    Estandares de media querry O convencion 
+
+    @media (min-width: 480px) {
+        "CUENADO SEA UN TELEFONO"
+    }
+
+    @media (min-width: 768px) {
+        "CUENADO SEA UN TABLET"
+    }
+
+    @media (min-width: 1140px) {
+        "CUENADO SEA UN LAPTOP"
+    }
+
+    @media (min-width: 1140px) {
+        "CUENADO SEA UN PC ESCRITORIO"
+    }
+
+
+Para probar los tamñas en base al dispositivo se puede hacer con la herramienta responsively.app
+
+    Agregar imagenes desde CSS
+
+        .hero {
+            background-image: url(../img/hero.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+    **  CSS BOX MODEL   **
+
+Todo CSS es una caja, pero como sea esa caja depende de 4 cosas 
+    ¿que es css box model?
+
+        El tamaño de lo que se muestra en pantalla esta delimitado por 4 cosas: tamaño de contenido, tamaño de relleno ( padding ), tamaño de 
+        borde y el margen 
+
+snippet de Paul Irish 
+     
+     Media Querie Box Model
+        RECURSO: https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+
+
+CSS GRID 
+Division del apartadp de mis servicios 
+Permite definir la ubicacion y el tamaño de los elementos del sitio web 
+El contenido se agrupa centro de una tabla definida 
+    CSS Grid 2 dimensiones 
+
+En el proyecto con grid lo que se realizo fue que en el partado de mis servicios se hace tres divisiones de manera horizontal pudiendose pensar como si se tuviera una tabla 
+
+Cuando usar CSS grid, flexbox, y floats 
+
+    flexbox: Para la alineacion o distribucion de los elementos que estaran dentro de contenedores  (ejemplo bara de navegacion con enlaces)
+    grid: Para definir el layout del sitio web, como pueden ser las columnas o contenedores de elementos (distribucion)
+
+
+
