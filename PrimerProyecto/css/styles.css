@@ -12,14 +12,18 @@ html {
     font-size: 62.5%;
     box-sizing: border-box; /* Hack para Box Model*/
     scroll-snap-type: y mandatory;
+    
 }
 
-/*Scroll Snap*/
-.servicios,
-.navegacionPrincipal {
+/*ScrollSnap*/
+.servicios, 
+.navegacionPrincipal,
+.formulario {
     scroll-snap-align: center;
     scroll-snap-stop: always;
 }
+
+
 
     *, *:before, *:after {
         box-sizing: inherit;
@@ -189,8 +193,9 @@ h1, h2, h3 {
     align-items: center;
 }
 
-/*Servicios en grid Grid*/
 
+
+/*Servicios */
 
 @media (min-width: 768px) {
     .servicios {
