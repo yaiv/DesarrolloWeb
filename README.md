@@ -1,6 +1,7 @@
 # DesWeb
 Diseñador Freelancer 
 (Proyecto 1)
+
 Este es un proyecto de portafolio para un diseñador y desarrollador web freelancer. La página presenta una estructura responsiva con una sección de servicios, un formulario de contacto y enlaces a redes.
 
 Tecnologías Utilizadas
@@ -47,7 +48,3 @@ Clonar el repositorio:
 git clone https://github.com/yaiv/DesWeb.git
 
 Abrir el archivo index.html en un navegador.
-
-Contribuciones
-
-Si deseas contribuir, puedes hacer un fork del proyecto y enviar un pull request con mejoras o correcciones.
