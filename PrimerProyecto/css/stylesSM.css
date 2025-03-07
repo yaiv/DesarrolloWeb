@@ -89,14 +89,15 @@ h3{
     max-width: none; /*no hay ancho maximo*/
     margin: 0;
     padding: auto auto;
-    height: 10.5rem; /* Ajusta la altura */
+    height: 8rem; /* Ajusta la altura */
  }
 
  .intermedioT{
     display: flex;
-    align-items:start;
+    align-items:center;
     justify-content: center;
     text-align: center;
+    height: 100%;
  }
  .interp {
     display: flex;
@@ -105,3 +106,111 @@ h3{
     text-align: center; /* Asegura que el texto se vea bien */
  }
 
+ .gym {
+    background-image: url(../img/gym.jpg);
+    width: 50%;    /*ANCHO*/
+    height: 50%; /*ALTO*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gym::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hiking {
+    background-image: url(../img/hiking.jpg);
+    width: 50%;    /*ANCHO*/
+    height: 50%; /*ALTO*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.running {
+    background-image: url(../img/running.jpg);
+    width: 50%;    /*ANCHO*/
+    height: 50%; /*ALTO*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.party {
+    background-image: url(../img/party.jpg);
+    width: 50%;    /*ANCHO*/
+    height: 50%; /*ALTO*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .contenedor {
+    display: flex;
+    width: 100vw; /* Ocupará todo el ancho de la pantalla */
+    height: 100vh; /* Ocupará toda la altura de la pantalla */
+}
+
+.imagenes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-template-rows: repeat(2, 1fr); /* Dos filas */
+    gap: 0px; /* Espacio entre imágenes */
+    width: 50%; /* Solo ocupa la mitad izquierda */
+    height: 100%;
+}
+
+.gym, .hiking, .running, .party {
+    width: 100%; /* Se ajustan dentro de la cuadrícula */
+    height: 100%; /* La mitad de la mitad = 25% del total */
+    background-size: cover; /* Ajusta la imagen sin recortes */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.texto {
+    background-color: var(--primario);
+    text-align: center;
+    max-width: none; /*no hay ancho maximo*/
+    margin: 0%;
+    width: 50%;
+
+}
+
+.footer {   /*Se alinena horizontal y verticalmente los iconos*/
+    background-color: var(--gris);
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.iconos {
+    height: 50%;
+    width: 10rem;
+    }
+
+.iconos svg {
+    width: 5rem;
+    height: 5rem;
+}
