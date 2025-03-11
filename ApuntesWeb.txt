@@ -335,4 +335,33 @@ Cuando usar CSS grid, flexbox, y floats
     grid: Para definir el layout del sitio web, como pueden ser las columnas o contenedores de elementos (distribucion)
 
 
+Se utiliza BEM 
+BLOCK 
+Metodologia para crear codigo reutilizable y ordenado en tus proyectos CSS
+    Se evitan colisiones de nombres
+    Hay que seguir las convenciones de BEM 
+
+Bloques
+Son un contenedor, si una seccion por si sola es significativa y no requiere de otras secciones para su apariencia 
+(CSS) debera ir en un bloque 
+
+Parte de un bloque, depende del bloque y no es por si solo significativo; tiene la caracteristica de que utilizan el nombre del bloque y 
+despues doble guion bajo _
+
+    <div class="cliente__nombre">...</div>
+    .cliente__nombre{...}
+
+Modificadores 
+Un bloque o Elemento tendra una variante? Se utiliza un modificador que es una bandera que avisa que ese elemento tendra un diseño diferente 
+    <p class="cliente__nombre--ceo">...</p>
+    .cliente__nombre--ceo
+
+Posicionar IMAGENES DE FONDO 
+    Se puede llavar a cabo a traves de CSS Grid
+        
+
+
+
+
+
 
