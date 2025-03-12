@@ -4,7 +4,8 @@
     --verdeClaro: #BFCCCC;
     --gris: #78807F;
     --blancoLigero: #EFFFFF;
-
+    --fuentePrincipal: "Staatliches", cursive;
+    --fuenteTitulo: "Krub";
 }
 
 /*Estilos Globales*/
@@ -74,15 +75,37 @@ h3{
     
  }
 
- .presentacion{
+ @media (min-width: 768px) {
+     .presentacion{
+        grid-template-columns: auto;
+     }
+ }
+ .presentacion {
     background-image: url(/img/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
     position: relative;
-    margin-bottom: 0; /*Se coloca cero para que no hay espacio con clase de intermedio */
+    margin-bottom: 0;
+    padding: 5rem .5rem;
+    
+    display: flex; /* Centrar contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    text-align: center;
+}
 
- }
+.presentacion__contenido {
+    max-width: 60rem; /* Limita el ancho del texto */
+    width: 90%; /* Para que no se expanda demasiado en móviles */
+    background: rgba(0, 0, 0, 0.3); /* Fondo oscuro translúcido */
+    color: var(--blancoLigero);
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    font-family: var(--fuenteTitulo);
+
+}
+
 
  .intermedio{
     background-color: var(--gris);
@@ -90,6 +113,7 @@ h3{
     margin: 0;
     padding: auto auto;
     height: 8rem; /* Ajusta la altura */
+    font-family: var(--fuentePrincipal);
  }
 
  .intermedioT{
@@ -106,11 +130,12 @@ h3{
     text-align: center; /* Asegura que el texto se vea bien */
  }
 
+
  .gym {
     background-image: url(../img/gym.jpg);
     width: 50%;    /*ANCHO*/
     height: 50%; /*ALTO*/
-    background-size: contain;
+    
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
@@ -131,7 +156,6 @@ h3{
     background-image: url(../img/hiking.jpg);
     width: 50%;    /*ANCHO*/
     height: 50%; /*ALTO*/
-    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
@@ -143,7 +167,7 @@ h3{
     background-image: url(../img/running.jpg);
     width: 50%;    /*ANCHO*/
     height: 50%; /*ALTO*/
-    background-size: contain;
+    
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
@@ -155,7 +179,7 @@ h3{
     background-image: url(../img/party.jpg);
     width: 50%;    /*ANCHO*/
     height: 50%; /*ALTO*/
-    background-size: contain;
+    
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
@@ -171,19 +195,20 @@ h3{
 
 .imagenes {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-    grid-template-rows: repeat(2, 1fr); /* Dos filas */
-    gap: 0px; /* Espacio entre imágenes */
-    width: 50%; /* Solo ocupa la mitad izquierda */
-    height: 100%;
+    grid-template-columns: repeat(auto 1fr); /* Dos columnas */
+    grid-template-rows: repeat(4, 1fr); /* Dos filas */
+    gap: 0px; /* Sin espacio entre imágenes */
+    width: 50%; /* La mitad de la pantalla */
+    height: 100%; /* Ocupará toda la altura de la ventana */
 }
 
 .gym, .hiking, .running, .party {
-    width: 100%; /* Se ajustan dentro de la cuadrícula */
-    height: 100%; /* La mitad de la mitad = 25% del total */
-    background-size: cover; /* Ajusta la imagen sin recortes */
+    width: 100%; /* Ocuparán todo el ancho del grid */
+    height: 100%; /* Ocuparán todo el alto del grid */
+    background-size: cover; /* Asegura que las imágenes llenen su contenedor */
+    background-position: center; /* Centra la imagen */
     background-repeat: no-repeat;
-    background-position: center;
+    flex-grow: 1; /* Asegura que cada celda de la cuadrícula se expanda completamente */
 }
 
 .texto {
@@ -191,9 +216,49 @@ h3{
     text-align: center;
     max-width: none; /*no hay ancho maximo*/
     margin: 0%;
-    width: 50%;
+    width: 90%;
+    font-family: var(--fuentePrincipal);
+    padding: 5rem 1rem;
+
 
 }
+
+.mia {
+        background-image: url(../img/mia.jpg);
+        min-height: 30rem;
+        width: 100%;  /* Asegura que tenga un ancho visible */
+        height: auto; /* Ajusta la altura según necesidad */
+        background-size: contain; /* Asegura que la imagen llene el contenedor */
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    @media (min-width: 768px) {
+        .mia {
+            grid-row: inherit;
+        }
+        
+    }
+
+    @media (min-width: 1000px) {
+        .texto {
+            padding: 6rem 2rem; /* Ajusta el padding para pantallas grandes */
+        }
+    
+        .mia {
+            min-height: 45rem; /* Aumenta la altura mínima de la imagen en pantallas grandes */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .texto {
+            padding: 2rem; /* Reduce el padding para pantallas pequeñas */
+        }
+    
+        .mia {
+            min-height: 20rem; /* Ajusta la altura mínima en pantallas más pequeñas */
+        }
+    }
 
 .footer {   /*Se alinena horizontal y verticalmente los iconos*/
     background-color: var(--gris);
