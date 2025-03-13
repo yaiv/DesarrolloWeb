@@ -361,7 +361,18 @@ Posicionar IMAGENES DE FONDO
         
 
 
+PATRONES DE RESPONSIVE WEB DESIGN
+    2 Columnas Iguales 
+    3 Columnas Iguales
+    Colum Drop
+    Con Sidebar
+    Layout Shifter 
+    Mostly Fluid 
+    
 
+    Dos columanas con CCS GRID
+Este tamaño usualmente se ve reflejado ya en tamaño de una tablet o de una computadora de escritorio 
+en un moviul se ve una columna arriba y la otra abaja en sitio web es una columna del lado izquierdo y la otra del lado derecho 
 
 
 
