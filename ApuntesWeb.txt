@@ -370,9 +370,14 @@ PATRONES DE RESPONSIVE WEB DESIGN
     Mostly Fluid 
     
 
-    Dos columanas con CCS GRID
+    Dos columanas iguales con CCS GRID
 Este tamaño usualmente se ve reflejado ya en tamaño de una tablet o de una computadora de escritorio 
 en un moviul se ve una columna arriba y la otra abaja en sitio web es una columna del lado izquierdo y la otra del lado derecho 
+    Una del lado izquiero y la otra del lado derecho 
+
+**  Pasos
+    -Definir que es lo que se quiere hacer 
+    
 
 
 
