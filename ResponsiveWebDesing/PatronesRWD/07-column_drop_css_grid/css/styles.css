@@ -50,3 +50,28 @@ p {
 
 
 /** CODIGO AQUI **/
+@media (min-width: 480px) { /*plica las reglas dentro solo si el ancho de la pantalla es igual o mayor a 480 píxeles*/
+ .column-drop-css {
+    display: grid; /*Define al contenedor como un grid para organizar el contenido.*/
+    grid-template-columns: repeat(2,1fr);  /*Divide el espacio del grid en dos columnas iguales, donde cada columna ocupa una fracción del ancho disponible.*/
+    gap: 2rem;  /*Agrega un espacio uniforme de 2 rem tanto entre columnas como entre filas.*/
+
+ }   
+ .segunda {
+    grid-column: 1/3;  /*Hace que este elemento ocupe ambas columnas (de la 1 a la 3) en el grid.*/
+ }
+}
+
+
+@media (min-width: 768px) {  /*solo si el ancho de la pantalla es igual o mayor a 768*/
+    .column-drop-css {
+        display: grid;  /*Define al contenedor como un grid para organizar el contenido.*/
+        grid-template-columns: repeat(3,1fr);  /*Divide el espacio del grid en tres columnas iguales, donde cada columna ocupa una fracción del ancho disponible.*/
+    }
+
+    .segunda {
+        grid-column: 3/4;   /*Posiciona este elemento en la tercera columna (de la 3 a la 4) del grid, dándole un lugar específico.*/
+    }
+    
+}
+

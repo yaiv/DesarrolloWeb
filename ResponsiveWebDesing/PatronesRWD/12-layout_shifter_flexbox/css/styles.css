@@ -48,3 +48,39 @@ p {
 }
 
 /** CODIGO AQUI **/
+
+@media (min-width: 768px) { /*únicamente en pantallas con un ancho igual o mayor a 768 píxeles*/
+    .layout-shifter {
+        display: flex;   /*Configura el contenedor como un flexbox, permitiendo organizar su contenido de forma flexible.*/
+        flex-direction: column-reverse;  /*Cambia la dirección del flujo de los elementos hijos a columnas invertidas, es decir, el último elemento aparece primero.*/
+    }
+
+    .contenido-principal{
+        display: flex;   /*Configura este contenedor como un flexbox*/
+        justify-content: space-between;  /*Distribuye los elementos hijos dentro del contenedor con el mayor espacio posible entre ellos.*/
+                
+    }
+}
+
+@media (min-width: 992px) { /*Aplica las reglas dentro solo en pantallas con un ancho igual o mayor a 992 píxeles*/
+    .layout-shifter {
+        flex-direction:row;  /*Cambia el flujo de los elementos hijos a una disposición horizontal (en fila).*/
+        justify-content: space-between;  /*Distribuye los elementos hijos con espacio uniforme entre ellos.*/
+    }
+    .contenido-principal {
+        flex: 0 0 calc(66.6% - 2rem);    /*Configura el comportamiento de flexbox:
+                                            0 (primer valor): No permite que el elemento crezca más allá del tamaño calculado.
+                                            0 (segundo valor): No permite que se reduzca más allá del tamaño calculado.
+                                            calc(66.6% - 2rem): Establece que el elemento ocupe el 66.6% del ancho del contenedor, menos 2 rem para dejar espacio.*/
+        
+                                            flex-wrap: wrap;     /*Permite que los elementos hijos del contenedor se ajusten en múltiples líneas si es necesario.*/
+    }
+    .sidebar {
+        flex: 0 0 calc(33.3% - 2rem);    /*Define que la barra lateral ocupe el 33.3% del ancho del contenedor, menos 2 rem para margen, sin crecer o reducirse fuera de ese tamaño.*/
+        order: 2;    /*Coloca este elemento en el segundo lugar en el flujo del flexbox, independientemente de su posición en el HTML.*/
+    }
+
+    .entrada-blog {
+        flex: 0 0 100%;  /*Configura el elemento para que ocupe el 100% del ancho del contenedor flex.*/
+    }
+}

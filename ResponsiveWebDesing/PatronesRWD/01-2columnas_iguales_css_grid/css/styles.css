@@ -39,3 +39,14 @@ h1 {
 }
 
 /** CODIGO AQUI **/
+
+@media (min-width: 768px) {   /*cuando el ancho de la pantalla sea igual o mayor a 768 píxeles, se aplicarán las siguientes propiedades*/
+    .dos-columnas {
+        display: grid;  /*Propierdades de CSS gris */
+        grid-template-columns: 50% 50%;  /*Se quieren dos culumnas una izquierda y otra derecha, tambien se puede escribir como  grid-template-columns: repear (2, 50%); O
+                                            1fr 1fr;  o repeat (2, 1fr)*/
+        column-gap: 2rem; /*Para agregar separacion entralas dos columnas*/
+        
+    }    
+    
+}

@@ -37,3 +37,14 @@ p {
 }
 
 /** CODIGO AQUI **/
+
+.contededor {
+    max-width: 120rem;
+    width: 95%;
+    margin: 0 auto;
+
+}
+
+img {
+    max-width: 100%;
+}

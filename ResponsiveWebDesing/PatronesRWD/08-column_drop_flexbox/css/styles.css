@@ -48,3 +48,32 @@ p {
 }
 
 /** CODIGO AQUI **/
+
+@media (min-width: 480px) { /*solo si el ancho de pantalla es igual o mayor a 480 píxeles*/
+    .column-drop-flex {
+        display: flex; /*Configura el contenedor como un flexbox, facilitando la distribución y alineación flexible de sus elementos hijos.*/
+        justify-content: space-between; /*Distribuye los elementos hijos con el mayor espacio posible entre ellos.*/
+        flex-wrap: wrap; /*Permite que los elementos hijos se "rompan" y ocupen una nueva fila si no cabe todo en una sola línea, ideal para diseños adaptables.*/
+    }
+    
+    .contenido-principal,
+    .primera {
+        flex-basis: calc(50% - 1rem); /*Define que cada uno de estos elementos ocupe el 50% del ancho disponible del contenedor flex, menos 1 rem, para agregar algo de espacio entre ellos*/
+    }
+}
+
+@media (min-width: 780px) { /*solo si el ancho de pantalla es igual o mayor a 780 píxeles*/
+    .contenido-principal,
+    .primera,
+    .segunda {
+        flex: 0 0 calc(33.3% - 2rem); /*Define el comportamiento flex de cada uno:
+                                        0 (primer valor): No permite que crezcan más allá del tamaño calculado.
+                                        0 (segundo valor): No permite que se reduzcan más allá del tamaño calculado.    
+                                        calc(33.3% - 2rem): Configura que cada elemento ocupe aproximadamente un tercio (33.3%) del ancho disponible del contenedor, menos 2 rem para garantizar espacio entre ellos.*/
+    }
+    
+}
+
+/*A partir de 480 píxeles, los elementos .contenido-principal y .primera se distribuyen en un diseño de dos columnas iguales (50% cada uno), con espacio entre ellos y flexibilidad para ajustarse en múltiples filas si es necesario.
+
+A partir de 780 píxeles, el diseño cambia a tres columnas iguales (33.3% cada una), incorporando un tercer elemento (.segunda) y ajustando el espacio entre las columnas.*/

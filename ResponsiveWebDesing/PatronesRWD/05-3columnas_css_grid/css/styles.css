@@ -49,3 +49,23 @@ p {
 
 
 /** CODIGO AQUI **/
+
+@media (min-width: 768px) {  /*olamente en dispositivos con un ancho mínimo de 768 píxeles  */
+    .contenedor-grid{
+        display: grid;  /*Establece el contenedor como un grid*/
+        grid-template-columns: 1fr 3fr 1fr;  /*Define tres columnas en el grid, donde:
+                                                La primera columna ocupa una fracción del espacio disponible (1fr).
+                                                La segunda columna (probablemente el contenido principal) ocupa tres fracciones del espacio disponible (3fr).
+                                                La tercera columna ocupa también una fracción (1fr).*/
+        grid-auto-flow: column;  /*Indica que los elementos se colocarán automáticamente en sentido de columnas, en lugar de filas, si no están explícitamente posicionados.*/
+        column-gap: 2rem;   /*Añade un espacio horizontal de 2 rem entre las columnas para mejorar la separación visual.*/
+    }
+
+    .contenido-principal {  /*Selecciona el elemento con la clase .contenido-principal.*/
+        grid-column: 2/3;  /*Posiciona el elemento en la segunda columna del grid (de la columna 2 a la 3). Esto asegura que el contenido principal esté centrado.*/
+    }
+
+    .sidebar1{
+        grid-column: 1/2;  /*Posiciona este elemento en la primera columna del grid (de la columna 1 a la 2), Sirve como barra lateral izquierda.*/
+    }
+}

@@ -49,3 +49,37 @@ p {
 
 
 /** CODIGO AQUI **/
+
+@media (min-width: 768px) {
+    .layouut-shifter{
+        display: grid;
+        grid-template-areas: "contenido"
+                              "inferior";
+    }
+
+    .sidebar {
+        grid-area: inferior;
+    }
+
+    .contenido-principal {
+        grid-area: contenido;
+    }
+    
+
+}
+
+
+@media (min-width: 992px) {
+    .layouut-shifter {
+        grid-template-areas: "contenido" "inferioir";
+    }
+
+    .sidebar {
+        grid-area: inferior;
+    }
+
+    .contenido-principal {
+        grid-area: contenido;
+    }
+    
+}

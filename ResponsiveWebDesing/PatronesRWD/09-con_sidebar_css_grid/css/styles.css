@@ -48,3 +48,24 @@ p {
 }
 
 /** CODIGO AQUI **/
+
+@media (min-width: 768px) { /*Aplica las reglas dentro únicamente en dispositivos con un ancho de pantalla igual o mayor a 768 píxeles*/
+    .con-sidebar { /**/
+        display: grid;  /*onfigura el contenedor como un grid, permitiendo organizar su contenido en una cuadrícula.*/
+        grid-template-columns: 3fr 1fr;  /*Define dos columnas en el grid:
+                                            La primera columna ocupa 3 fracciones del espacio disponible.
+                                            La segunda columna ocupa 1 fracción, generalmente para la barra lateral.*/
+        column-gap: 4rem;  /*Establece un espacio horizontal de 4 rem entre las columnas, creando separación visual.*/
+        grid-auto-flow: column;  /*Define que los elementos se organicen automáticamente en filas a lo largo de las columnas.*/
+
+    }
+
+    .aside {
+        grid-column: 2/3;  /*osiciona el elemento en la segunda columna del grid, que va desde la columna 2 hasta la 3 (la segunda columna específicamente).*/
+    }
+}
+  /*El contenedor .con-sidebar crea un grid donde la primera columna (principal) ocupa el 75% del espacio y la segunda (barra lateral) el 25%.
+
+El elemento .aside se posiciona específicamente en la segunda columna. Este enfoque resulta ideal para un diseño que incluye un contenido principal amplio y una barra lateral, asegurando una distribución armónica en pantallas más grandes*/
+
+

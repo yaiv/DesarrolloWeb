@@ -39,3 +39,12 @@ h1 {
 }
 
 /** CODIGO AQUI **/
+
+@media (min-width: 768px) {     /*solo en dispositivos con un ancho de pantalla igual o mayor a 768 píxeles.*/
+    .tres-columnas {    
+        display: grid;  /*Define al contenedor .tres-columnas como un grid, lo que permite organizar su contenido en una cuadrícula*/
+        grid-template-columns: repeat(3, 1fr); /*Divide el área en tres columnas iguales usando la función repeat(3, 1fr), donde cada columna ocupa una fracción del espacio disponible.*/
+        column-gap: 2rem; /*Añade un espacio horizontal de 2 rem entre las columnas.*/
+    }
+}
+

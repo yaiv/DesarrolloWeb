@@ -49,3 +49,26 @@ p {
 
 
 /** CODIGO AQUI **/
+
+@media (min-width: 768px) { /*únicamente en pantallas con un ancho mínimo de 768 píxeles*/
+    .con-sidebar {
+        display: flex;  /*Configura el contenedor como un flexbox, lo que permite distribuir y alinear elementos hijos de manera flexible*/
+        gap: 2rem;  /*Añade un espacio uniforme de 2 rem entre los elementos hijos, manteniendo una separación visual adecuada.*/
+    }   
+    
+    .aside {
+        flex: 1;  /*Indica que este elemento ocupará 1 unidad proporcional de ancho en el contenedor flex. Esto significa que su tamaño será relativo al espacio total disponible y a otros elementos que compartan el contenedor.*/
+    }
+
+    .article {
+        flex: 3;  /*Define que este elemento ocupará 3 unidades proporcionales de ancho en el contenedor flex, es decir, será tres veces más ancho que .aside.*/
+    }
+}
+
+/*organiza un diseño basado en flexbox en el que:
+
+El contenedor .con-sidebar distribuye sus elementos hijos de forma horizontal con espacio entre ellos gracias a gap.
+
+La barra lateral (.aside) ocupa un ancho proporcional más pequeño (1 unidad).
+
+El contenido principal (.article) ocupa un ancho mayor (3 unidades), reflejando su importancia en el diseño.*/

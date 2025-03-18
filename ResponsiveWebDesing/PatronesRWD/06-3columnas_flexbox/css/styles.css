@@ -48,3 +48,23 @@ p {
 }
 
 /** CODIGO AQUI **/
+
+@media (min-width: 768px) { /* Cuando el ancho de pantalla es igual o mayor a 768 píxeles*/
+    .contenedor-flex {
+        display: flex;  /*Define al contenedor como Flexbox lo que facilita distribucion y alineacion de elementos hijos*/
+        justify-content: space-between; /*Distribuye los elementos hijos con el mayor espacio posible entre ellos. El primero se alinea a la izquierda, el último a la derecha y los demás se distribuyen proporcionalmente*/
+
+    }
+    
+    .contenido-principal {
+        flex-basis: calc(60% - 1rem); /*Define que este elemento ocupe el 60% del ancho disponible del contenedor flex, menos 1 rem, permitiendo un diseño espacioso con margen.*/
+    }
+
+    .sidebar {
+        flex-basis: calc(20% - 1rem); /*Establece se ocupe el 20% del ancho del contenedor flex, menos 1 rem, ajustándo con un pequeño espacio.*/
+    }
+
+    .sidebar-1 {
+        order: -1; /*Cambia el orden del elemento en el contenedor flex, colocándolo antes de los otros elementos, sin importar su posición en el HTML.*/
+    }
+}
