@@ -1,0 +1,172 @@
+:root {
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif ;
+
+    --primario: #784D3C;
+    --gris: #e1e1e1;
+    --blanco: #ffffff;
+    --negro: #000000;
+
+}
+
+html {
+    box-sizing: border-box; /* Hack para Box Model*/
+    font-size: 62.5%;
+    
+}
+    *, *:before, *:after {
+        box-sizing: inherit;
+
+} 
+ 
+body {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+
+/*Globales*/
+
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuenteHeading);
+
+}
+h1 {
+    font-size: 4.8rem;
+}
+
+h2{
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+h4{
+    font-size: 2.8rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*Utilidades*/
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+/*Header*/
+.header {
+    background-image: url(..//img/banner.jpg);
+    height: 60rem;  /*Se define altura imagen*/
+    background-size: cover;  /*Hace que se tomme todo el espacio disponible*/
+    background-repeat: no-repeat;
+    background-position: center center;  /*Que se muestre el centro de la imagen tiene valores de izquierda derecha arrba abajo */
+}
+
+.header-texto {
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 5rem; /*margen de separacion */
+}
+
+@media (min-width: 768px) {
+    .header-texto{
+        margin-top: 15rem;
+    }
+}
+@media (min-width: 768PX) {
+    .barra{
+        display: flex;
+        justify-content: space-between; /*alinea contenido horixontalmente y se agrega space-between para que sea una del lado izquierdo y el otro del lado derecho*/
+        align-items: center;   /*alinea verticalemnte al centro*/
+    }
+}
+
+.logo {
+    color: var(--blanco);
+
+}
+
+.logo__nombre{
+    font-weight: 400;
+}
+
+.logo__bold {
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .navegacion {
+        display: flex;  /*Se coloca uno frente a otro solo en pantallas a partir de 768px*/
+        gap: 2rem;
+    }
+}
+.navegacion__enlace {
+    display: block;  /*Los elementos se colocan uno debajo del otro*/
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco);
+}
+
+@media (min-width: 768px) {
+    .contenido-principal{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
+}
+
+.entrada{
+    border-bottom: 1px solid var(--gris); /* Agrega una línea inferior con un grosor de 1px, color tomado de la variable CSS `--gris`. */
+    margin-bottom: 2rem; /* Deja un espacio inferior de 2rem entre este elemento y el siguiente. */
+
+}
+
+.entrada:last-of-type {
+    border: none; /* Elimina el borde inferior para el último elemento con la clase `.entrada`. */
+    margin-bottom: 0; /* Elimina el espacio inferior específicamente para este último elemento. */
+}
+
+.boton {
+    display: block;
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 780px) {
+    .boton {
+        display: inline;
+    }
+    
+}
+
+.boton--primario {
+    background-color: var(--negro);
+}
