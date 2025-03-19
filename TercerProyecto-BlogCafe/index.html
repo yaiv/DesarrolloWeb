@@ -9,6 +9,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--Preload-->
+
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=PT+Sans:wght@400;700&display=swap" crossorigin="crossorigin" as="font">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="img/blog1.jpg" as="image">
+    <link rel="stylesheet" href="img/blog1.jpg">
+
+    <!--prefetch-->
+    <link rel="prefetch" href="nosotros.html" as="document">
+
 </head>
 <body>
     <header class="header">
@@ -39,7 +57,7 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog1.jpg" alt="imagen blog">
+                    <img loading="lazy" src="img/blog1.jpg" alt="imagen blog">
                 </div>
 
                 <div class="entrada__contenido">
@@ -53,7 +71,7 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog2.jpg" alt="imagen blog">
+                    <img loading="lazy" src="img/blog2.jpg" alt="imagen blog">
                 </div>
 
                 <div class="entrada__contenido">
@@ -72,7 +90,7 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog3.jpg" alt="imagen blog">
+                    <img loading="lazy" src="img/blog3.jpg" alt="imagen blog">
                 </div>
 
                 <div class="entrada__contenido">
