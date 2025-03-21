@@ -13,6 +13,7 @@
 html {
     box-sizing: border-box; /* Hack para Box Model*/
     font-size: 62.5%;
+    background-color: var(--grisOscuro);
     
 }
     *, *:before, *:after {
@@ -24,6 +25,7 @@ body {
     font-family: var(--fuenteParrafos);
     font-size: 1.6rem;
     line-height: 2;
+
 }
 
 
@@ -46,6 +48,7 @@ h1, h2, h3, h4 {
 }
 h1 {
     font-size: 4.8rem;
+
 }
 
 h2{
@@ -77,6 +80,7 @@ img {
     text-align: center;
 }
 
+/*
 .header {
     background-image: url(../img/encabezado.jpg);
     height: 60rem;
@@ -84,7 +88,7 @@ img {
     background-repeat: no-repeat;
     background-position: center center;
 }
-
+*/
 .header-texto {
     text-align: center;
     color: var(--blanco);
@@ -114,29 +118,160 @@ a {
 }
 
 .logo {
-    color: var(--verdeNeon);
-
+    text-decoration: none;
+    color: var(--negro);
+    display: flex;
+    align-items: center;
 }
 
+
 .logo__nombre {
+    font-size: 4rem;
     font-weight: 600;
+    color: var(--negro);
+    transition: color 0.3s ease-in-out;
+
 }
 
 .logo__bold {
     font-weight: 900;
+    transition: color 0.3s ease-in-out;
+
 }
 
+.titulo {
+    font-size: 3rem;
+    
+
+}
+
+span {
+    font-size: 2.5rem;
+}
+
+.iconos {
+    display: flex; /* Asegura que los iconos estén en línea */
+    gap: 2rem; /* Espaciado entre iconos */
+}
+
+
+.contenedor {
+    max-width: 120rem; /*maximo 1200px mientras alla ese espacio disponible */
+    width: 90%; /*Se ocupa el 90% min(90%, 120rem;) es lo mismo que se tiene en codigo  */
+    margin: 0 auto;
+}
+
+
+.barra {
+    display: flex;
+    justify-content: space-between; /* Logo a la izquierda, iconos a la derecha */
+    align-items: center; /* Alinea verticalmente */
+    padding-top: 1.5rem; /* Reduce el padding para evitar separación */
+}
+
+/* Asegura que los íconos sean uniformes */
+h1, .navegacion__iconos {
+    text-align: center;
+    color: var(--negro);
+    transition: color 0.3s ease-in-out;
+}
+
+h1:hover, .navegacion__iconos:hover, .boton:hover {
+    color: var(--verdeNeon);
+}
+
+
+.contenedor {
+    max-width: 120rem;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+}
+
+.navBg{
+    background-color: var(--verdeNeon);
+}
+
+.navegacionPrincipal {
+    display: flex;
+    flex-direction: column;
+}
 
 @media (min-width: 768px) {
-    .navegacion {
-        display: flex;
-        gap: 2rem;
-    }    
+    .navegacionPrincipal {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
 }
 
-.navegacion__enlace {
+.navegacionPrincipal a {
     display: block;
     text-align: center;
-    font-size: 2.2rem;
-    color: var(--verdeNeon);
+    color: var(--negro);
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 1rem;  /*Agrega espacio de afuera hacia adentro*/
+}
+/*hover es una pseudoclase*/
+.navegacionPrincipal a:hover {  /*Evento para el mouse al colocarse sobre los enlaces*/
+    background-color: var(--primario);
+    color: var(--oscuro)
+}
+
+.imgBg {
+    background-image: url(../img/img5.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    position: relative;  
+    margin-bottom: 2rem;
+}
+
+.contenido-imgBg{
+    position: absolute;
+   background-color: rgb(0,0,0, .6);  /*Form anterior de la transparencia rgb ( 0 0 0 / 70% )*/
+    width: 100%;
+    height: 100%;
+
+    display: flex;  /*El contenido se marca de izquirda a derecha (se alinea horizontalmente)*/
+    flex-direction: column; /*El contenido va uno bajo el otro  */
+    align-items: center; /*Alinea en el ceentro el contenido horizontalmente*/
+    justify-content: center; /*Alinea igual al centro pero verticalmente */
+}
+
+.contenido-imgBg h2,
+.contenido-imgBg h3{
+    color:var(--blanco);
+}
+
+
+.boton{
+    background-color: var(--naranja); /*color de fondo del boton*/
+    color: var(--blanco); /*color blanco de letras*/
+    padding: 1rem 3rem; /*espacio que hay de las letras hacia afuera del boton*/
+    margin-top: 1rem; /*margen fuera del boton*/
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5rem; /*Redondea bordes*/
+    width: 90%;
+    text-align: center;
+    border: none;
+
+}
+
+@media (min-width: 768px) {
+    .boton{
+        max-width: 250px;
+    }
+}
+
+.boton:hover {
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
 }
