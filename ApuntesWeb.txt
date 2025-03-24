@@ -380,4 +380,38 @@ en un moviul se ve una columna arriba y la otra abaja en sitio web es una column
     
 
 
+        JAVASCRIPT 
+-JS añade comportamiento e interactividad a los sitios web sirve para desarrollo front end, backend desarrollo de aplicaciones moviles y de escritorio mac, linux o windows 
+
+-Se puede reaccionar a eventer del usuario en la pagina web 
+    *VALIDAR FORMULARIOS 
+    *PROCESAR INFORMACION 
+    *MOSTRAR MAPAS O UBICACIONES 
+    
+-El lenguaje contiene variables, funciones, estructuras de control, metodos, lo cual lo hace un lenguaje de programacion a diferencia de HTML o CSS 
+
+-Cada año se tiene versiones diferentes del lenguaje pero a con ES6 es la mas famosa es decir 
+        ES2015 = ES6 
+        ES2016=ES7
+        etc...
+
+-JS corre sobre algo llamado DOM: que es como estan conectado los diferentes elementos de tu sitio web 
+
+-Otros Usos de JS
+    *SERVIDOR: NodeJS / Express / Deno 
+    *Automatizacion: Gulp JS / WebPack / ESLint 
+    *Dependencias: NPM 
+    *Apps Moviles o de Escritorio: React Native / Electron 
+
+Aprender lo basico en JS es clave para aprender otras tecnologias y se tiene una gran ventaja laboral al conocer esta tecnologia
+
+**  Al trabajar con JS se recomienda que se trabaje en archivo externo y antes de que cierre la etiqueta de </body>
+
+    Se conecta el archivo JS de la siguiente manera en el HTML     <script src="js/scripts.js"></script>
+
+
+Tipos de datos en JS 
+
+
+
 
