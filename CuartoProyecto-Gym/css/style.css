@@ -692,7 +692,7 @@ h1:hover, .navegacion__iconos:hover, .boton:hover {
 }
 
 .nosotros__contenido h2 {
-    font-size: 2.5rem;
+    font-size: 5rem;
     color: #bada55; /* Verde neón */
     margin-bottom: 1rem;
 }
@@ -701,6 +701,10 @@ h1:hover, .navegacion__iconos:hover, .boton:hover {
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 1rem;
+}
+
+.nosotros__contenido p {
+    font-size: 2rem;
 }
 
 .nosotros__imagenes {

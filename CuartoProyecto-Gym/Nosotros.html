@@ -9,6 +9,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=PT+Sans:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="preload" href="css/normalize.css">
+<link rel="stylesheet" href="css/normalize.css">
+
+<link rel="preload" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
+
+
 </head>
 <body>
         <header class="titulo">
@@ -19,28 +27,31 @@
                             <h1 class="logo__nombre">King's<span class="logo__bold">Gym</span></h1>
                         </a>
                     <nav class="iconos">
-                        <a href="#" class="navegacion__iconos"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="40" height="40" stroke-width="1.5"> <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path> <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path> <path d="M16.5 7.5l0 .01"></path> </svg> </a>
-                        <a href="#" class="navegacion__iconos"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="40" height="40" stroke-width="1.5"> <path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z"></path> </svg> </a>
-                        <a href="#" class="navegacion__iconos"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="40" height="40" stroke-width="1.5"> <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path> </svg></a>
-
+                        <nav class="iconos">
+                            <a href="https://www.instagram.com/kingsgympapalotl/" class="navegacion__iconos" target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="40" height="40" stroke-width="1.5"> <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path> <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path> <path d="M16.5 7.5l0 .01"></path> </svg> </a>
+                            <a href="https://www.tiktok.com/@gimnasioking" class="navegacion__iconos" target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="40" height="40" stroke-width="1.5"> <path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z"></path> </svg> </a>
+                            <a href="https://www.facebook.com/profile.php?id=100077255622812" class="navegacion__iconos" target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="40" height="40" stroke-width="1.5"> <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path> </svg></a>
+            
+                        </nav>     
                     </nav>
                 </div>
             </div>
         </header>
 
         <div class="navBg">
-
             <nav class="navegacionPrincipal contenedor">
-                        <a href="#" class="navegacion__enlace">Nosotros</a>
-                        <a href="#" class="navegacion__enlace">Unidades</a>
-                        <a href="#" class="navegacion__enlace">Podcast</a>           
-            </nav>        
+                <a href="index.html" class="navegacion__enlace">Inicio</a>
+                <a href="Nosotros.html" class="navegacion__enlace">Nosotros</a>
+                <a href="https://www.youtube.com/@KingsGymMX" class="navegacion__enlace" target="_blank">Podcast</a>           
+    </nav>   
+
+ 
         </div>
 
         <section class="imgBg">
             <div class="contenido-imgBg centrar-texto">    
-                <h2 class="sucursal__titulo">Bienvenido a <span id="nombreSucursal">King’s Gym</span></h2>
-                <h3>Sobre Nosotros</h2>
+                <h2>Bienvenido a King´s Pacifico</h2>
+                <h3>Sobre Nosotros</h3>
 
             </div>
         </section>
@@ -54,11 +65,14 @@
                 <p>Además, impartimos box y pilates, combinando fuerza, resistencia y flexibilidad en entrenamientos diseñados para potenciar tu rendimiento. Nuestro equipo de instructores certificados está comprometido con tu progreso, asegurando que alcances tus objetivos con asesoría profesional.</p>
         
                 <p>Para mantenernos conectados con nuestra comunidad, contamos con un podcast donde compartimos consejos, experiencias y estrategias para mejorar tu desempeño y bienestar. En Kins Gym, no solo entrenas, ¡evolucionas!</p>
+                <a class="boton centrar-texto" href="https://wa.me/5573584231">Inscríbete</a>
+
             </section>
         
             <section class="nosotros__imagenes">
                 <img src="img/SucursalNosotros.PNG" alt="Instalaciones de Kins Gym">
-                <img src="img/gym2.jpg" alt="Competencia de culturismo en Kins Gym">
+                <img src="img/nosotros.PNG" alt="Competencia de culturismo en Kins Gym">
+
             </section>
         </main>
         
@@ -77,10 +91,10 @@
                     <h2>King’s<span>Gym</span></h2>
                     <p>Tu mejor opción para entrenar con profesionales.</p>
                     <div class="footer__redes">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100077255622812" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/kingsgympapalotl/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@gimnasioking" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.youtube.com/@KingsGymMX" target="_blank"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
         
@@ -88,11 +102,10 @@
                 <nav class="footer__nav">
                     <h3>Enlaces Rápidos</h3>
                     <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Nosotros</a></li>
-                        <li><a href="#">Sucursales</a></li>
-                        <li><a href="#">Podcast</a></li>
-                        <li><a href="#">Contacto</a></li>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="Nosotros.html">Nosotros</a></li>
+                        <li><a href="https://www.youtube.com/@KingsGymMX" target="_blank">Podcast</a></li>
+                        <li><a href="https://github.com/yaiv" class="navegacion__enlace" target="_blank">Autor</a> </li>
                     </ul>
                 </nav>
         
@@ -100,8 +113,8 @@
                 <div class="footer__contacto">
                     <h3>Contacto</h3>
                     <p><i class="fas fa-map-marker-alt"></i> CDMX, México</p>
-                    <p><i class="fas fa-phone-alt"></i> +52 55 1234 5678</p>
-                    <p><i class="fas fa-envelope"></i> info@kingsgym.mx</p>
+                    <p><i class="fas fa-phone-alt"></i> +52 55 73 58 42 31</p>
+                    <p><i class="fas fa-envelope"></i> yaiv@kingsgym.mx</p>
                 </div>
             </div>
         
