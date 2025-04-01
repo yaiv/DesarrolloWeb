@@ -37,5 +37,30 @@ for (let i = 0; i < carrito.length; i++ ) {
 
 
 // While Loop      Mientas
+//Se ejecuta mientras una condicion sea evaluada como verdadera, revisa primero la condicion y despues ejecuta el codigo
+
+// let i = 0;      //indice
+
+// while ( i < 30 ) {      //condicion
+
+//     if ( i % 2 === 0 ) {
+//         console.log (`El numero ${i} es par, hay 2 pa 2`);
+//     } else {
+//         console.log (`El numero ${i} es impar, no hay 2 pa 2`)
+//     }
+
+//     i++;        //incremento 
+// }
+
 
 //Do While Loop     Haz Mientras
+//El codigo se ejecuta al menos una vez y despues va a revisar si la condicion se cumple 
+let i = 100;
+
+do {
+
+    console.log(i)
+
+    i++;
+
+} while ( i < 10 );
