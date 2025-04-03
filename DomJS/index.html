@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogDeCafé</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--Preload-->
+
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=PT+Sans:wght@400;700&display=swap" crossorigin="crossorigin" as="font">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="img/blog1.jpg" as="image">
+    <link rel="stylesheet" href="img/blog1.jpg">
+
+    <!--prefetch-->
+    <link rel="prefetch" href="nosotros.html" as="document">
+
+</head>
+<body>
+    <header class="header">
+
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo"href="index.html">
+                    <h1 class="logo__nombre centrar-texto no-margin">Blog<span class="logo__bold">DeCafé</span></h1>
+                </a>
+
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a> 
+                </nav>
+            </div>
+        </div>
+    
+        <div class="header-texto">
+            <h2 class="no-margin">Blog de Café con consejos y cursos</h2>
+            <p class="no-margin">Aprende de los expertos con las mejores recetas y consejos</p>
+        </div>
+    </header>
+
+    <div class="contenedor contenido-principal">
+        <main class="blog">
+            <h3>Nuestro Blog</h3>
+
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <img loading="lazy" src="img/blog1.jpg" alt="imagen blog">
+                </div>
+
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">Tipos de Granos de Café</h4>
+                    <p> El mundo del café es tan diverso como fascinante, y todo comienza con los granos. Los más conocidos son arábica y robusta. El café arábica, apreciado por su sabor más suave y aromático, crece en altitudes elevadas y es ideal para quienes buscan un café refinado con notas florales o afrutadas. Por otro lado, el robusta, más resistente y de sabor intenso, ofrece un toque amargo y alto contenido de cafeína, perfecto para los amantes de un café fuerte. También existen granos menos comunes como el libérica, con su sabor único y achocolatado, y el excelsa, que aporta complejidad con notas ácidas y afrutadas. Cada variedad es un viaje diferente a las tierras donde se cultiva.
+
+                    </p>
+                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                </div>
+            </article>
+
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <img loading="lazy" src="img/blog2.jpg" alt="imagen blog">
+                </div>
+
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">3 Deliciosas Recetas de Café</h4>
+                    <p>
+                        Affogato italiano: Una bola de helado de vainilla se combina con un espresso recién preparado para un postre-café que es pura decadencia. </p>
+
+                    <p>    Latte especiado: Mezcla tu café espresso con leche vaporizada y añade una pizca de canela, nuez moscada y un toque de jarabe de vainilla para un abrazo en una taza. </p>
+
+                    <p> Café vietnamita: Un café oscuro se mezcla con leche condensada dulce y se sirve frío o caliente. Es una explosión de sabor. </p>
+                    
+                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                </div>
+            </article>
+
+
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <img loading="lazy" src="img/blog3.jpg" alt="imagen blog">
+                </div>
+
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">Beneficios del cafe</h4>
+                    <p>Más allá de su sabor encantador, el café tiene beneficios sorprendentes. Está cargado de antioxidantes que ayudan a combatir los radicales libres en el cuerpo. También mejora la concentración y reduce el cansancio gracias a la cafeína, convirtiéndose en el aliado perfecto para empezar el día con energía. Además, estudios sugieren que el consumo moderado de café puede estar asociado con un menor riesgo de enfermedades como el Parkinson y la diabetes tipo 2.
+                    </p>
+                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                </div>
+            </article>
+
+        </main>
+
+        <aside class="sidebar">
+            <h3>Nuestros Cursos y Talleres</h3>
+
+            <ul class="cursos no-padding">
+            <li class="widget-curso">
+            <h4 class="no-margin">Tecnicas de extraccion de Café</h4>
+            <p class="widget-curso__label">Precio:
+                <span class="widget-curso__info">Gratis</span>
+            </p>
+            <p class="widget-curso__label">Cupo: 
+                <span class="widget-curso__info">20</span>
+            </p>
+            <a href="entrada.html" class="boton boton--secundario">Más información</a>
+
+            </li>
+
+            <li class="widget-curso">
+                <h4 class="no-margin">4 Recetas de cafe para principantes</h4>
+                <p class="widget-curso__label">Precio:
+                    <span class="widget-curso__info">Gratis</span>
+                </p>
+                <p class="widget-curso__label">Cupo: 
+                    <span class="widget-curso__info">20</span>
+                </p>
+                <a href="entrada.html" class="boton boton--secundario">Más información</a>
+    
+                </li>
+
+                <li class="widget-curso">
+                    <h4 class="no-margin">Maestría barista</h4>
+                    <p class="widget-curso__label">Precio:
+                        <span class="widget-curso__info">Gratis</span>
+                    </p>
+                    <p class="widget-curso__label">Cupo: 
+                        <span class="widget-curso__info">20</span>
+                    </p>
+                    <a href="entrada.html" class="boton boton--secundario">Más información</a>
+        
+                    </li>
+            </ul>
+        </aside>
+    </div>
+
+    
+        <footer class="footer">
+            <div class="contenedor">
+                <div class="barra">
+                    <a class="logo"href="index.html">
+                        <h1 class="logo__nombre centrar-texto no-margin">Blog<span class="logo__bold">DeCafé</span></h1>
+                    </a>
+    
+                    <nav class="navegacion">
+                        <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                        <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                        <a href="contacto.html" class="navegacion__enlace">Contacto</a> 
+                        <a href="https://github.com/yaiv" class="navegacion__enlace">Autor</a> 
+                        
+                    </nav>
+                </div>
+            </div>
+
+        </footer>
+    
+
+</body>
+
+</html>
