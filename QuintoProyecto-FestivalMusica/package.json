@@ -1,0 +1,27 @@
+{
+  "name": "quintoproyecto-festivalmusica",
+  "version": "1.0.0",
+  "description": "Aprendiendo SASS Y NPM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yaiv/DesWeb.git"
+  },
+  "keywords": [
+    "\"SASS\"",
+    "\"NPM\"",
+    "\"Gulp\""
+  ],
+  "author": "Yair Guerra @yaiv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yaiv/DesWeb/issues"
+  },
+  "homepage": "https://github.com/yaiv/DesWeb#readme",
+  "devDependencies": {
+    "sass": "^1.86.3"
+  }
+}
