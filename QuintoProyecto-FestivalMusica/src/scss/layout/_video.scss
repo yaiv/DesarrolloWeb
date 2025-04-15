@@ -1,0 +1,54 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'sass:color';
+
+
+//Colocar encima del video es mediante posiciones absolutas y relativas
+
+.video {
+
+    position: relative; //el padre siempre es relative
+    //Se corta el video pero se va a desbordar 
+    min-height: 50rem;
+    max-height: 70rem;
+    overflow: hidden; //hace que lo que se desborda sea oculto
+    .overlay{
+        position: absolute; //la position absolute no se tiene agregada por defauld es por ello que se especifica, para que se habiliten las cordenadas 
+        background: linear-gradient(
+            270deg,
+            rgba(v.$morado, 0.6),
+            rgba( color.adjust(v.$morado, $lightness: -30%), 0.9)   /*Nueva sintaxis*/
+            
+        );
+        inset: 0;
+        display: flex;
+        align-items: center;
+    }
+    video {
+        display: block;
+        width: auto; //para dispositivos pequeños
+        @include m.desktop {
+            width: 100%; //para dispotivos de 1200px aprox
+        }
+
+    }
+}
+
+.contenido-video{
+    z-index: 10; //controla la profundidad de un elemento y se usa cuando se trabaja con posicion absoluta y relativa porque los elementos quedan uno tras de otro lo que no permite seleccionarlo
+    h2{
+        color: v.$blanco;
+        font-size: 7rem;
+        margin: 0;
+
+    }
+    p{
+        background-color: v.$rosa;
+        display: inline; //no se le puede poner margin
+        padding: 1rem, 2rem;
+        color: v.$blanco;
+        font-weight: 700;
+        margin: 0;
+    }
+
+}

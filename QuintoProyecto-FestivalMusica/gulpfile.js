@@ -7,15 +7,16 @@ const sass = gulpSass(dartSass)
 
 export function css ( done ) {
     src('src/scss/app.scss')
-        .pipe( sass() )
+        .pipe( sass() .on('error', sass.logError ) ) //Se verifica error tras eliminar build
         .pipe( dest('build/css') )
 
     done()
 }
 
-
+//Busqueda de todos los archivos con extension .scss para que se 
+//genere la compilacion en app.css
 export function dev() {
-    watch('src/scss/app.scss', css)
+    watch('src/scss/**/*.scss', css)
 }
 
 
