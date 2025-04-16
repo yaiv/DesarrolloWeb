@@ -1,0 +1,88 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.galeria {
+    @include m.contenedor; //se centran las imagenes 
+
+    &-imagenes{
+
+        //se dan tamaños con los mixins para que sean responsivas las imagenes 
+        @include m.grid(1, 2rem); //se genera la separacion entre elementos 
+
+        @include m.telefono{
+            @include m.grid(2, 2rem);
+        }
+
+        @include m.tablet{
+            @include m.grid(3, 2rem);
+        }
+
+        @include m.desktop{
+            @include m.grid(4, 2rem);
+        }
+
+        //Se llenan correctamente las imagenes en altura y ancho 
+
+        img {
+            height: 20rem;
+            object-fit: cover; //se fuerza a colocar imagen en el contenedor 
+        }
+
+    }
+}
+
+.modal{
+    position: fixed; //pone fijo al elemento 
+    inset: 0;
+    background-color: rgba(v.$negro, 0.5);
+    display: grid;
+    place-items: center; //se centra imagen
+
+    animation: fadeIn ease-in 0.5s;  //abrir modal 
+
+    &.fade-out{
+        animation: fadeOut ease-in 0.5s;  //cerrar modal 
+
+    }
+
+    img {
+        //se limita tamaño una vez abierto el modal 
+        max-width: 100rem;
+    
+    }
+
+}
+//estilo de boton 
+.btn-cerrar{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: v.$blanco;
+    border: none;
+    color: v.$negro;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+//Animacion al abrir el modal 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+//Animacion al cerrar modal 
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

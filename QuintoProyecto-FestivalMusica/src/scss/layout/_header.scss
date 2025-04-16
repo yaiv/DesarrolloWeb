@@ -4,6 +4,20 @@
 .header {
     background-color: v.$verde;
 
+    //Para mantener la barra en la parte superior creando y eliminando la clase, no se incluye en celulares 
+    @include m.tablet{
+        &.fixed{
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            box-shadow: 1rem .2rem .3rem #333;
+    
+        }
+
+    }
+
+
     .contenido-header {
         padding: 2rem;
         @include m.tablet{
@@ -37,7 +51,8 @@
         color: v.$blanco;
         font-size: 2.4rem;
 
-        &:hover{  //el amperson & va a eliminar espacio en blanco de lo que es app.css ya que de lo contrario no se reconocera hover
+        &:hover,
+        &.active {  //el amperson & va a eliminar espacio en blanco de lo que es app.css ya que de lo contrario no se reconocera hover
             color: v.$amarillo;
         }
         

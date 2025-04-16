@@ -30,3 +30,23 @@
   
   }
 }
+
+@mixin contenedor {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+//se le agrego al mixin $columanas para que al ocuparlo se le pueda poner un parametro y se ponga en automatico en template-columns
+//se incluye $gap para definirlo al usar el mixin con la opcion de que si no se ingresa un valor se pondra en automatico $gap : 5rem
+@mixin grid($columnas: 1, $gap: 5rem) {
+  display: grid;
+  grid-template-columns: repeat($columnas, 1fr);
+  gap: $gap;
+}
+
+@mixin resetear-lista {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

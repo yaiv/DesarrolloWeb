@@ -1,0 +1,21 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.sobre-festival{
+    @include m.contenedor;
+    //Se incluye para tener diseño responsivo con el contenido 
+    @include m.tablet {
+        @include m.grid(2); //se ocupa mixin de grid y se especifica $columnas se debe importar para usar 
+    }
+}
+
+.contenido-festival {
+    margin-top: 5rem; //separacion de video 
+    h2{
+        margin-bottom: 2rem;
+    }
+    .fecha{
+        color: v.$verde;
+        font-weight: 700;
+    }
+}

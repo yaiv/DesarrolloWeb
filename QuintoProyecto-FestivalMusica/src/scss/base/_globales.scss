@@ -16,6 +16,10 @@ body {
     font-style: normal;
     color: v.$negro;
     font-size: 2rem;
+    //lo que este fuera de modal estara oculto y evita el scroll
+    &.overflow-hidden{
+        overflow: hidden;
+    }
 }
 p {
     color: v.$negro;
@@ -49,6 +53,6 @@ img { //toman tod  el espacio del contenedor
     height: auto;
     display: block;
 }
-body > section { //primer section que sea hijo de body tendra las caracteristricas especificadas 
+body > section { //se le aplica este css al primer nivel de hijos que tenga un body tendra las caracteristricas especificadas 
     padding: 10rem 0
 }
