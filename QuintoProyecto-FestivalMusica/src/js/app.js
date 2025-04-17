@@ -81,10 +81,17 @@ function crearGaleria(){
     const galeria = document.querySelector('.galeria-imagenes')
     //se generan el html de 16 imagenes vacias
     for(let i = 1; i <= CantidadImagenes; i++) {
-        const imagen = document.createElement('IMG')  
-        //se inyecta atributo de la ubicacion de la imagen 
-        imagen.src = `src/img/gallery/full/${i}.jpg`
-        imagen.alt = 'imagen galeria'
+        const imagen = document.createElement('PICTURE')  
+                //Se mejora performance
+                imagen.innerHTML = `
+                <source srcset="build/img/gallery/thumb/${i}.avif" type="image/avif">
+                <source srcset="build/img/gallery/thumb/${i}.webp" type="image/webp">
+                <img loading="lazy" width="200" height="300" src="build/img/gallery/thumb/${i}.jpg" alt="imagen galeria">
+            `;
+
+        // //se inyecta atributo de la ubicacion de la imagen 
+        // imagen.src = `src/img/gallery/thumb/${i}.jpg`
+        // imagen.alt = 'imagen galeria'
 
         //Event Handler -Detecta y responder a una interaccion del usuario 
         //detectar interaccion del usuario con las imagenes 
@@ -101,11 +108,17 @@ function mostrarImagen(i) {
     // console.log('desde mostrarImagen', i) se valida en consola entrada de indice mediante la funcion
 
     //se genera imagen 
-        const imagen = document.createElement('IMG')  
-        //se inyecta atributo de la ubicacion de la imagen 
-        imagen.src = `src/img/gallery/full/${i}.jpg`
-        //Se inyecta texto alternativo
-        imagen.alt = 'imagen galeria'
+        const imagen = document.createElement('PICTURE')  
+        // //se inyecta atributo de la ubicacion de la imagen 
+        // imagen.src = `src/img/gallery/full/${i}.jpg`
+        // //Se inyecta texto alternativo
+        // imagen.alt = 'imagen galeria'
+
+        imagen.innerHTML = `
+    <source srcset="build/img/gallery/full/${i}.avif" type="image/avif">
+    <source srcset="build/img/gallery/full/${i}.webp" type="image/webp">
+    <img loading="lazy" width="200" height="300" src="build/img/gallery/full/${i}.jpg" alt="imagen galeria">
+`;
 
     //se genera modal 
     const modal = document.createElement('DIV') //se genera div
