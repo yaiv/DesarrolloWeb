@@ -1,50 +1,30 @@
-# DesWeb
-Diseñador Freelancer 
-(Proyecto 1)
+# 👨‍💻 Yaiv - Proyectos Personales
 
-Este es un proyecto de portafolio para un diseñador y desarrollador web freelancer. La página presenta una estructura responsiva con una sección de servicios, un formulario de contacto y enlaces a redes.
+¡Hola! Soy Yaiv, y este repositorio contiene mis proyectos personales con los que he venido aprendiendo y practicando desarrollo web.
 
-Tecnologías Utilizadas
+## 🚀 Tecnologías que uso
 
-HTML5: Estructura de la página.
+- 🧱 **Frontend:** HTML, CSS, JavaScript
+- 🎨 **Estilos avanzados:** SASS
+- ⚙️ **Automatización:** Gulp
+- 🧠 **Lógica y DOM:** JS puro con ejercicios y prácticas
 
-CSS3: Estilos y diseño responsivo.
+---
 
-Flexbox y Grid: Para disposición del contenido.
+## 📁 Estructura del repositorio
 
-Google Fonts: Tipografía Krub.
+- `01_portafolio/` - Mi primer sitio tipo portafolio personal
+- `02_tienda-playeras/` - Tienda de camisetas con diseño responsivo y enfoque en frontend
+- `03_blog-cafe/` - Blog temático sobre café, con estructura clara y secciones bien definidas
+- `04_kings-gym/` - Sitio web para una cadena de gimnasios llamada Kins Gym
+- `05_festival-musica/` - Proyecto para un festival musical estilo EDC
+- `ejercicios-logica-js/` - Resolución de problemas lógicos usando JavaScript
+- `dom-practicas/` - Manipulación del DOM con JS, eventos, interacciones y más
 
-Normalize.css: Para estandarizar estilos en navegadores.
+---
 
-SVG: Íconos gráficos vectoriales.
+## 🧠 ¿Por qué este repositorio?
 
-Estructura del Proyecto
+Este repositorio nació como mi **campo de entrenamiento personal**. Aquí aplico todo lo que voy aprendiendo sobre diseño web, lógica de programación y herramientas modernas del entorno frontend.
 
-📂 diseñador-freelancer
-├── 📂 css
-│   ├── normalize.css
-│   ├── styles.css
-├── 📂 img
-│   ├── hero.jpg
-├── index.html
-├── README.md
-
-Funcionalidades
-
-Sección Hero con título y botón de contacto.
-
-Barra de navegación con enlaces a secciones clave.
-
-Sección de servicios con iconos representativos.
-
-Formulario de contacto para recibir mensajes.
-
-Diseño responsivo adaptado a diferentes dispositivos.
-
-Instalación y Uso
-
-Clonar el repositorio:
-
-git clone https://github.com/yaiv/DesWeb.git
-
-Abrir el archivo index.html en un navegador.
+---
